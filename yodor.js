@@ -79,6 +79,8 @@ if (Meteor.isClient) {
     }
   });
 
+  document.addEventListener("touchstart", function(){}, true);
+
 }
 
 if (Meteor.isServer) {
