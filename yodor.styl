@@ -1,12 +1,11 @@
 @import nib
 global-reset()
 
-bgcolor = #262720
-color1 = #3B3B00
-color2 = #8EA972
-color3 = #ACA39E
-color4 = #8B857F
-color5 = #4C5B46
+bgcolor = #262519
+color1 = #89A949
+color2 = #9A6643
+color3 = #50985D
+color4 = #98833E
 
 
 body
@@ -47,6 +46,9 @@ body
     background: color4
   transition all 300ms ease-in-out
 
+.users__user, .users__add-user
+  // animation elementAppears 300ms forwards ease-in-out
+
 .users__user:active
   transform scale3d(0.9, 0.9, 1)
 
@@ -71,6 +73,26 @@ body
     &::-webkit-input-placeholder
       color #fff
 
+.debug
+  text-align center
+  margin-top 50px
+  font-size 20px
+  line-height 32px
+  color rgba(255, 255, 255, .1)
+  li:nth-child(1)
+    color rgba(255, 255, 255, .5)
+  li:nth-child(2)
+    color rgba(255, 255, 255, .4)
+  li:nth-child(3)
+    color rgba(255, 255, 255, .3)
+  li:nth-child(4)
+    color rgba(255, 255, 255, .2)
+
+@keyframes elementAppears
+  0%
+    transform: translate3d(0, -100%, 0)
+  100%
+    transform: translate3d(0, 0, 0)
 
 @media (max-width: 600px)
   .users__user, .users__add-user, .register
