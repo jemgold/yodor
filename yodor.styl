@@ -1,0 +1,53 @@
+@import nib
+global-reset()
+
+body
+  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+
+.unstyled-list
+  margin-left 0
+  list-style none
+  -webkit-margin-before 0
+  -webkit-margin-after 0
+  -webkit-padding-start 0
+
+.users
+  width: 640px
+  @extend .unstyled-list
+
+.users__user, .users__add-user, .register
+  height: 90px
+  line-height 90px
+  text-align center
+  text-transform uppercase
+  background-size contain
+  font-weight bold
+  color white
+  user-select none
+  font-size 48px
+  &:nth-child(3n+1)
+    background-image: url('1.jpg')
+  &:nth-child(3n+2)
+    background-image: url('2.jpg')
+  &:nth-child(3n+3)
+    background-image: url('3.jpg')
+
+.users__add-user, .register
+  position: relative
+  input[type='submit']
+    display: none
+  #friend-username, #register-username
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 0
+    border: 0
+    font-size 48px
+    font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+    font-weight bold
+    text-align center
+    color: #fff
+    background none
